@@ -1,0 +1,60 @@
+<ion-content [fullscreen]="true">
+  <br><br>
+  <div class="centrar">
+    <ion-row>
+      <ion-col size="3">
+        <b> <ion-icon name="return-up-back-outline" style="font-size: 1.5em;" (click)="volver()"></ion-icon> </b>
+      </ion-col>
+    </ion-row>
+  </div>
+  <br><br>
+    <div class="centrar">
+      <ion-label class="title">Agregar Lugar</ion-label>
+    </div>
+  
+    <br><br>
+  
+    <div class="ion-margin-horizontal">
+  
+      <form [formGroup]="registrarLugarForm">
+        <ion-label class="ion-margin-horizontal">Ubicacion</ion-label>
+        <ion-item>
+          <ion-input class="custom" formControlName="ubicacion" type="text" required></ion-input>
+        </ion-item>
+        <br />
+        <ion-label class="ion-margin-horizontal">Direccion:</ion-label>
+        <ion-item>
+          <ion-input class="custom" formControlName="direccion" type="text" required></ion-input>
+        </ion-item>
+        <br />
+        <ion-label class="ion-margin-horizontal">nombre:</ion-label>
+        <ion-item>
+          <ion-input class="custom" formControlName="nombre" type="text"></ion-input>
+        </ion-item>
+  
+        <br />
+  
+        <ion-row>
+          <ion-col size="6" >
+            <ion-label class="ion-margin-horizontal">tipo:</ion-label>
+            <ion-item>
+              <ion-select class="custom"  placeholder="Selecciona" formControlName="tipo">
+                <ion-select-option value="belleza">BELLEZA</ion-select-option>
+                <ion-select-option value="medico">MEDICO</ion-select-option>
+                <ion-select-option value="gubernamental">GUBERNAMENTAL</ion-select-option>
+              </ion-select>
+               </ion-item>
+          </ion-col>
+      </ion-row>
+  
+      <br />
+
+      </form>
+    </div>
+    <br /> <br />
+    <div class="centrar">
+      <ion-button color="primary" (click)="registrarLugar()">REGISTRAR</ion-button> <br />
+      <br /> <br />
+    </div>
+    
+  </ion-content>

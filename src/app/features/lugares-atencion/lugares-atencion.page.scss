@@ -1,0 +1,15 @@
+.maps{
+    width: 30px
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 20px; 
+  }
+  
+  ion-button.floating {
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+  }

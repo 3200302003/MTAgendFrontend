@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true">
+  <br><br>
+  <div class="centrar">
+    <ion-row>
+      <ion-col size="3">
+        <b> <ion-icon name="return-up-back-outline" style="font-size: 1.5em;" (click)="volver()"></ion-icon> </b>
+      </ion-col>
+    </ion-row>
+  </div>
+  
+  <div class="centrar">
+    <ion-label class="title">Agregar Horario</ion-label>
+  </div>
+    
+      <br><br>
+    
+      <div class="ion-margin-horizontal">
+    
+        <form [formGroup]="registrarHorarioForm">
+          <ion-label class="ion-margin-horizontal">Hora</ion-label>
+          <ion-item>
+            <ion-input class="custom" formControlName="hora" type="text" required></ion-input>
+          </ion-item>
+          <br />
+          <ion-label class="ion-margin-horizontal">Fecha:</ion-label>
+          <ion-item>
+            <ion-input class="custom" formControlName="fecha" type="date" required></ion-input>
+          </ion-item>
+          <br />
+    
+          <br />
+    
+          <ion-row>
+            <ion-col size="6" >
+              <ion-label class="ion-margin-horizontal">Status:</ion-label>
+              <ion-item>
+                <ion-select class="custom"  placeholder="Selecciona" formControlName="status" >
+                  <ion-select-option value="ocupado">OCUPADO</ion-select-option>
+                  <ion-select-option value="libre">LIBRE</ion-select-option>
+                  <ion-select-option value="comida">COMIDA</ion-select-option>
+                </ion-select>
+                 </ion-item>
+            </ion-col>
+        </ion-row>
+    
+        <br />
+  
+        </form>
+      </div>
+      <br /> <br />
+      <div class="centrar">
+        <ion-button color="primary" (click)="registrarLugar()">REGISTRAR</ion-button> <br />
+        <br /> <br />
+      </div>
+      
+    </ion-content>

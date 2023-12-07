@@ -1,0 +1,60 @@
+.login{
+    width: 30px
+}
+
+.lista {
+    border-radius: 7px;
+    --background: transparent; 
+ }
+
+.hora{
+    font-size: 21px;
+    font-weight: bold;
+}
+.hora2{
+    font-size: 21px;
+    font-weight: bold;
+    color: black;
+}
+
+.statusCita{
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: burlywood;
+    font-weight: bold;
+    font-size: 12PX;
+    text-align: center;
+    padding: 1px;
+    height: 20PX;
+}
+
+.statusCita2{
+    color: black;
+    font-weight: bold;
+    font-size: 12PX;
+    text-align: center;
+    padding: 1px;
+    height: 20PX;
+}
+
+
+.colorOcupado {
+    background: white;
+  }
+  
+  .colorLibre {
+    background:  greenyellow;
+  }
+  
+  .colorCerrado {
+    background: red;
+  }
+  
+  .colorComida {
+    background: yellow;
+  }
+  
+  .lista::part(item) {
+    background-color: var(--background);
+  }
+  

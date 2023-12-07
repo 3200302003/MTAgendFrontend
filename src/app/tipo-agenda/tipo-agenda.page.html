@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="10">
+          <ion-label class="header" color="secondary">MTAGENDA</ion-label>
+        </ion-col>
+        <ion-col size="1">
+          <ion-img class="login" [src]="cerrarSesion" alt="" (click)="login()" ></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-label class="ion-margin-horizontal"><b>{{bienvenida}}</b></ion-label>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" offset="5.5">
+        <ion-img class="centrar btnTipos" [src]="belleza" alt="" (click)="navegacion('belleza')"></ion-img>
+        <P class="ion-text-center">Belleza</P>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-img class=" btnTipos" [src]="medico" alt="" (click)="navegacion('medico')"></ion-img>
+        <P class="ion-margin-horizontal"> Servicio Medico</P>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" offset="5.5">
+        <ion-img class="centrar btnTipos" [src]="gubernamental" alt="" (click)="navegacion('gubernamental')"></ion-img>
+        <P class="ion-text-center">Gubernamentales</P>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

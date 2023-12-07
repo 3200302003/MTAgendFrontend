@@ -1,0 +1,7 @@
+{
+  "name": "Práctica_Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

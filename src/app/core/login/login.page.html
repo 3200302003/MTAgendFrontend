@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+  <img class="logo" [src]="login" alt="" />
+
+  <br /><br /><br />
+  <div class="ion-margin-horizontal">
+
+    <form [formGroup]="loginForm">
+      <ion-label class="ion-margin-horizontal">Correo Electronico:</ion-label>
+      <ion-item>
+        <ion-input class="custom" formControlName="email" type="email" required></ion-input>
+      </ion-item>
+      <br /> <br />
+      <ion-label class="ion-margin-horizontal">Contraseña:</ion-label>
+      <ion-item>
+        <ion-input class="custom" formControlName="password" type="password"></ion-input>
+      </ion-item>
+    </form>
+  </div>
+  <br /> <br />
+  <div class="centrar">
+    <ion-button color="primary" (click)="iniciarSesion()" [disabled]="!loginForm.valid">Login</ion-button> <br />
+    <br /> <br />
+    <p>Si aun no tienes cuenta <a (click)="registrar()"> Registrate </a></p>
+  </div>
+
+</ion-content>

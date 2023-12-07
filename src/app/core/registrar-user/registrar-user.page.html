@@ -1,0 +1,63 @@
+<ion-content [fullscreen]="true">
+<br><br>
+  <div class="centrar">
+    <ion-label class="title">!Si no tienes cuenta Registrate!</ion-label>
+  </div>
+
+  <br><br>
+
+  <div class="ion-margin-horizontal">
+
+    <form [formGroup]="registrarForm">
+      <ion-label class="ion-margin-horizontal">nombre Completo:</ion-label>
+      <ion-item>
+        <ion-input class="custom" formControlName="nombre" type="email" required></ion-input>
+      </ion-item>
+      <br />
+      <ion-label class="ion-margin-horizontal">Correo Electronico:</ion-label>
+      <ion-item>
+        <ion-input class="custom" formControlName="email" type="email" required></ion-input>
+      </ion-item>
+      <br />
+      <ion-label class="ion-margin-horizontal">Contraseña:</ion-label>
+      <ion-item>
+        <ion-input class="custom" formControlName="password" type="password"></ion-input>
+      </ion-item>
+
+      <br />
+
+      <ion-row>
+        <ion-col size="6" >
+          <ion-label class="ion-margin-horizontal">sexo:</ion-label>
+          <ion-item>
+            <ion-select class="custom"  placeholder="Selecciona" formControlName="sexo">
+              <ion-select-option value="M">MASCULINO</ion-select-option>
+              <ion-select-option value="F">FEMENINO</ion-select-option>
+              </ion-select>
+             </ion-item>
+        </ion-col>
+
+        <ion-col size="6" >
+          <ion-label >Fecha Nacimiento:</ion-label>
+          <ion-item>
+            <ion-input class="custom" formControlName="fechaNacimiento" type="date"></ion-input>
+          </ion-item>
+        </ion-col>
+    </ion-row>
+
+    <br />
+
+    <ion-label class="ion-margin-horizontal">Ciudad:</ion-label>
+    <ion-item>
+      <ion-input class="custom" formControlName="ciudad" type="text"></ion-input>
+    </ion-item>
+    
+    </form>
+  </div>
+  <br /> <br />
+  <div class="centrar">
+    <ion-button color="primary" (click)="registrar()" [disabled]="!registrarForm.valid">REGISTRAR</ion-button> <br />
+    <br /> <br />
+  </div>
+  
+</ion-content>
